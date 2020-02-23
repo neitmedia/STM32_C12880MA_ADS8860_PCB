@@ -1,0 +1,519 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x32_Odd_Even J1
+U 1 1 5E4E53BD
+P 2900 2550
+F 0 "J1" H 2950 4267 50  0000 C CNN
+F 1 "Conn_02x32_Odd_Even" H 2950 4176 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x32_P2.54mm_Vertical" H 2900 2550 50  0001 C CNN
+F 3 "~" H 2900 2550 50  0001 C CNN
+	1    2900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x32_Odd_Even J2
+U 1 1 5E4EA3D4
+P 6200 2550
+F 0 "J2" H 6250 4267 50  0000 C CNN
+F 1 "Conn_02x32_Odd_Even" H 6250 4176 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x32_P2.54mm_Vertical" H 6200 2550 50  0001 C CNN
+F 3 "~" H 6200 2550 50  0001 C CNN
+	1    6200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E4E8753
+P 3525 1050
+F 0 "#PWR0101" H 3525 800 50  0001 C CNN
+F 1 "GND" H 3530 877 50  0000 C CNN
+F 2 "" H 3525 1050 50  0001 C CNN
+F 3 "" H 3525 1050 50  0001 C CNN
+	1    3525 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1050 2400 1050
+Wire Wire Line
+	2400 1050 2400 775 
+Wire Wire Line
+	2400 775  3525 775 
+Wire Wire Line
+	3525 775  3525 1050
+Wire Wire Line
+	3200 1050 3525 1050
+Connection ~ 3525 1050
+Wire Wire Line
+	6500 1050 6800 1050
+Wire Wire Line
+	5725 1050 5725 775 
+Wire Wire Line
+	5725 775  6800 775 
+Wire Wire Line
+	6800 775  6800 1050
+Wire Wire Line
+	5725 1050 6000 1050
+Text GLabel 2375 4550 0    50   Input ~ 0
+3V3
+Text GLabel 5750 4550 0    50   Input ~ 0
+5V
+Wire Wire Line
+	6000 4150 5900 4150
+Wire Wire Line
+	5900 4150 5900 4550
+Wire Wire Line
+	5900 4550 5750 4550
+Wire Wire Line
+	6500 4150 6600 4150
+Wire Wire Line
+	6600 4150 6600 4550
+Wire Wire Line
+	6600 4550 5900 4550
+Connection ~ 5900 4550
+Wire Wire Line
+	2700 4150 2525 4150
+Wire Wire Line
+	2525 4150 2525 4550
+Wire Wire Line
+	2525 4550 2300 4550
+Wire Wire Line
+	3200 4150 3325 4150
+Wire Wire Line
+	3325 4150 3325 4550
+Wire Wire Line
+	3325 4550 2525 4550
+Connection ~ 2525 4550
+$Comp
+L Sensor_Optical:C12880MA U1
+U 1 1 5E4F81EB
+P 4050 2200
+F 0 "U1" H 4050 2881 50  0000 C CNN
+F 1 "C12880MA" H 4050 2790 50  0000 C CNN
+F 2 "OptoDevice:Hamamatsu_C12880" H 3950 2650 50  0001 C CNN
+F 3 "http://www.hamamatsu.com/resources/pdf/ssd/c12880ma_kacc1226e.pdf" H 4050 2750 50  0001 C CNN
+	1    4050 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E4FDE9A
+P 4050 2800
+F 0 "#PWR0102" H 4050 2550 50  0001 C CNN
+F 1 "GND" H 4055 2627 50  0000 C CNN
+F 2 "" H 4050 2800 50  0001 C CNN
+F 3 "" H 4050 2800 50  0001 C CNN
+	1    4050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2700 3950 2800
+Wire Wire Line
+	3950 2800 4050 2800
+Wire Wire Line
+	4150 2700 4150 2800
+Wire Wire Line
+	4150 2800 4050 2800
+Connection ~ 4050 2800
+Text GLabel 3750 1700 0    50   Input ~ 0
+5V
+Wire Wire Line
+	3750 1700 3850 1700
+Connection ~ 3850 1700
+Wire Wire Line
+	3850 1700 3950 1700
+$Comp
+L power:GND #PWR0103
+U 1 1 5E504445
+P 5725 1050
+F 0 "#PWR0103" H 5725 800 50  0001 C CNN
+F 1 "GND" H 5730 877 50  0000 C CNN
+F 2 "" H 5725 1050 50  0001 C CNN
+F 3 "" H 5725 1050 50  0001 C CNN
+	1    5725 1050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5725 1050
+$Comp
+L samacsys:ADS8860IDGS IC1
+U 1 1 5E5050BF
+P 8250 1325
+F 0 "IC1" H 8850 1590 50  0000 C CNN
+F 1 "ADS8860IDGS" H 8850 1499 50  0000 C CNN
+F 2 "SamacSys_Parts:SOP50P490X110-10N" H 9300 1425 50  0001 L CNN
+F 3 "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=ADS8860&&fileType=pdf" H 9300 1325 50  0001 L CNN
+F 4 "16 bit 1 MSPS, Serial, Pseudo-Differential Input, Micro Power, Miniature, SAR ADC" H 9300 1225 50  0001 L CNN "Description"
+F 5 "1.1" H 9300 1125 50  0001 L CNN "Height"
+F 6 "595-ADS8860IDGS" H 9300 1025 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-ADS8860IDGS" H 9300 925 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 9300 825 50  0001 L CNN "Manufacturer_Name"
+F 9 "ADS8860IDGS" H 9300 725 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8250 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E5083B2
+P 8250 1725
+F 0 "#PWR02" H 8250 1475 50  0001 C CNN
+F 1 "GND" H 8255 1552 50  0000 C CNN
+F 2 "" H 8250 1725 50  0001 C CNN
+F 3 "" H 8250 1725 50  0001 C CNN
+	1    8250 1725
+	1    0    0    -1  
+$EndComp
+Text GLabel 9825 1325 2    50   Input ~ 0
+3V3
+Text GLabel 7725 1425 0    50   Input ~ 0
+3V3
+Wire Wire Line
+	9450 1325 9750 1325
+Wire Wire Line
+	7725 1425 7800 1425
+$Comp
+L Device:C C1
+U 1 1 5E530684
+P 7800 1275
+F 0 "C1" H 7925 1400 50  0000 L CNN
+F 1 "1 uF" H 7925 1325 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7838 1125 50  0001 C CNN
+F 3 "~" H 7800 1275 50  0001 C CNN
+	1    7800 1275
+	1    0    0    -1  
+$EndComp
+Connection ~ 7800 1425
+Wire Wire Line
+	7800 1425 8250 1425
+$Comp
+L Device:C C2
+U 1 1 5E530F34
+P 9750 1175
+F 0 "C2" H 9875 1250 50  0000 L CNN
+F 1 "1 uF" H 9875 1175 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9788 1025 50  0001 C CNN
+F 3 "~" H 9750 1175 50  0001 C CNN
+	1    9750 1175
+	1    0    0    -1  
+$EndComp
+Connection ~ 9750 1325
+Wire Wire Line
+	9750 1325 9825 1325
+$Comp
+L power:GND #PWR01
+U 1 1 5E531881
+P 7800 1125
+F 0 "#PWR01" H 7800 875 50  0001 C CNN
+F 1 "GND" H 7805 952 50  0000 C CNN
+F 2 "" H 7800 1125 50  0001 C CNN
+F 3 "" H 7800 1125 50  0001 C CNN
+	1    7800 1125
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E53208B
+P 9750 1025
+F 0 "#PWR03" H 9750 775 50  0001 C CNN
+F 1 "GND" H 9755 852 50  0000 C CNN
+F 2 "" H 9750 1025 50  0001 C CNN
+F 3 "" H 9750 1025 50  0001 C CNN
+	1    9750 1025
+	-1   0    0    1   
+$EndComp
+Text GLabel 8250 1325 0    50   Input ~ 0
+REF
+Wire Wire Line
+	8250 1625 8250 1725
+Connection ~ 8250 1725
+$Comp
+L samacsys:REF6050IDGKT IC2
+U 1 1 5E534DEC
+P 8225 2200
+F 0 "IC2" H 8825 2465 50  0000 C CNN
+F 1 "REF6050IDGKT" H 8825 2374 50  0000 C CNN
+F 2 "SamacSys_Parts:SOP65P490X110-8N" H 9275 2300 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/REF6050" H 9275 2200 50  0001 L CNN
+F 4 "5ppm/C High-Precision Voltage Reference with Integrated High-Bandwidth Buffer" H 9275 2100 50  0001 L CNN "Description"
+F 5 "1.1" H 9275 2000 50  0001 L CNN "Height"
+F 6 "595-REF6050IDGKT" H 9275 1900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-REF6050IDGKT" H 9275 1800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 9275 1700 50  0001 L CNN "Manufacturer_Name"
+F 9 "REF6050IDGKT" H 9275 1600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8225 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 8125 2250 0    50   Input ~ 0
+3V3
+Wire Wire Line
+	8225 2200 8225 2250
+Wire Wire Line
+	8125 2250 8225 2250
+Connection ~ 8225 2250
+Wire Wire Line
+	8225 2250 8225 2300
+$Comp
+L power:GND #PWR05
+U 1 1 5E54D05A
+P 9525 2250
+F 0 "#PWR05" H 9525 2000 50  0001 C CNN
+F 1 "GND" V 9530 2122 50  0000 R CNN
+F 2 "" H 9525 2250 50  0001 C CNN
+F 3 "" H 9525 2250 50  0001 C CNN
+	1    9525 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9425 2200 9425 2250
+Wire Wire Line
+	9425 2250 9525 2250
+Connection ~ 9425 2250
+Wire Wire Line
+	9425 2250 9425 2300
+$Comp
+L Device:C C3
+U 1 1 5E54E75F
+P 8150 2725
+F 0 "C3" H 8265 2771 50  0000 L CNN
+F 1 "1 uF" H 8265 2680 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8188 2575 50  0001 C CNN
+F 3 "~" H 8150 2725 50  0001 C CNN
+	1    8150 2725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8225 2500 8150 2500
+Wire Wire Line
+	8150 2500 8150 2575
+$Comp
+L power:GND #PWR04
+U 1 1 5E552B78
+P 8150 2875
+F 0 "#PWR04" H 8150 2625 50  0001 C CNN
+F 1 "GND" H 8155 2702 50  0000 C CNN
+F 2 "" H 8150 2875 50  0001 C CNN
+F 3 "" H 8150 2875 50  0001 C CNN
+	1    8150 2875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2825 8000 2825
+Wire Wire Line
+	8000 2825 8000 2400
+Wire Wire Line
+	8000 2400 8225 2400
+Wire Wire Line
+	9425 2400 9425 2450
+Text GLabel 9600 2450 2    50   Input ~ 0
+REF
+Wire Wire Line
+	9425 2450 9525 2450
+Connection ~ 9425 2450
+Wire Wire Line
+	9425 2450 9425 2500
+$Comp
+L Device:C C4
+U 1 1 5E55D469
+P 9525 2600
+F 0 "C4" H 9640 2646 50  0000 L CNN
+F 1 "47 uF" H 9640 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9563 2450 50  0001 C CNN
+F 3 "~" H 9525 2600 50  0001 C CNN
+	1    9525 2600
+	1    0    0    -1  
+$EndComp
+Connection ~ 9525 2450
+Wire Wire Line
+	9525 2450 9600 2450
+$Comp
+L power:GND #PWR06
+U 1 1 5E55F7A8
+P 9525 2750
+F 0 "#PWR06" H 9525 2500 50  0001 C CNN
+F 1 "GND" H 9530 2577 50  0000 C CNN
+F 2 "" H 9525 2750 50  0001 C CNN
+F 3 "" H 9525 2750 50  0001 C CNN
+	1    9525 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L samacsys:OPA836IDBVR IC3
+U 1 1 5E56D0B3
+P 8475 4125
+F 0 "IC3" H 9025 4390 50  0000 C CNN
+F 1 "OPA836IDBVR" H 9025 4299 50  0000 C CNN
+F 2 "SamacSys_Parts:SOT95P280X145-6N" H 9425 4225 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/OPA836" H 9425 4125 50  0001 L CNN
+F 4 "Very Low Power, Rail to Rail out, Negative Rail in, VFB Op Amp" H 9425 4025 50  0001 L CNN "Description"
+F 5 "1.45" H 9425 3925 50  0001 L CNN "Height"
+F 6 "595-OPA836IDBVR" H 9425 3825 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-OPA836IDBVR" H 9425 3725 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 9425 3625 50  0001 L CNN "Manufacturer_Name"
+F 9 "OPA836IDBVR" H 9425 3525 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8475 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E5718BA
+P 8325 4125
+F 0 "R2" V 8118 4125 50  0000 C CNN
+F 1 "1 kOhm" V 8209 4125 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8255 4125 50  0001 C CNN
+F 3 "~" H 8325 4125 50  0001 C CNN
+	1    8325 4125
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8175 4125 8175 4225
+Text GLabel 4450 2300 2    50   Input ~ 0
+VIDEO
+$Comp
+L Device:R R1
+U 1 1 5E57CCC9
+P 8025 4225
+F 0 "R1" V 7818 4225 50  0000 C CNN
+F 1 "1 kOhm" V 7909 4225 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7955 4225 50  0001 C CNN
+F 3 "~" H 8025 4225 50  0001 C CNN
+	1    8025 4225
+	0    1    1    0   
+$EndComp
+Text GLabel 7875 4225 0    50   Input ~ 0
+VIDEO
+$Comp
+L Device:R R3
+U 1 1 5E588790
+P 9175 3275
+F 0 "R3" V 8968 3275 50  0000 C CNN
+F 1 "4,7 Ohm" V 9059 3275 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9105 3275 50  0001 C CNN
+F 3 "~" H 9175 3275 50  0001 C CNN
+	1    9175 3275
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E588C82
+P 9175 3575
+F 0 "R4" V 9400 3925 50  0000 C CNN
+F 1 "4,7 Ohm" V 9300 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9105 3575 50  0001 C CNN
+F 3 "~" H 9175 3575 50  0001 C CNN
+	1    9175 3575
+	0    1    1    0   
+$EndComp
+Text GLabel 8250 1525 0    50   Input ~ 0
+AINP
+Text GLabel 8150 1625 0    50   Input ~ 0
+AINN
+Wire Wire Line
+	8150 1625 8250 1625
+Connection ~ 8250 1625
+$Comp
+L Device:C C5
+U 1 1 5E59A19F
+P 9325 3425
+F 0 "C5" H 9440 3471 50  0000 L CNN
+F 1 "10 nF" H 9440 3380 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9363 3275 50  0001 C CNN
+F 3 "~" H 9325 3425 50  0001 C CNN
+	1    9325 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5E5B0EA0
+P 9025 3575
+F 0 "#PWR08" H 9025 3325 50  0001 C CNN
+F 1 "GND" V 9030 3447 50  0000 R CNN
+F 2 "" H 9025 3575 50  0001 C CNN
+F 3 "" H 9025 3575 50  0001 C CNN
+	1    9025 3575
+	0    1    1    0   
+$EndComp
+Text GLabel 9750 3575 2    50   Input ~ 0
+AINN
+Wire Wire Line
+	9325 3575 9750 3575
+Connection ~ 9325 3575
+Text GLabel 9750 3275 2    50   Input ~ 0
+AINP
+Wire Wire Line
+	9325 3275 9750 3275
+Connection ~ 9325 3275
+Wire Wire Line
+	8475 4125 8475 3275
+Wire Wire Line
+	8475 3275 9025 3275
+Connection ~ 8475 4125
+$Comp
+L power:GND #PWR07
+U 1 1 5E5BF7EA
+P 8475 4325
+F 0 "#PWR07" H 8475 4075 50  0001 C CNN
+F 1 "GND" V 8480 4197 50  0000 R CNN
+F 2 "" H 8475 4325 50  0001 C CNN
+F 3 "" H 8475 4325 50  0001 C CNN
+	1    8475 4325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8175 4225 8175 4475
+Wire Wire Line
+	8175 4475 9650 4475
+Wire Wire Line
+	9650 4475 9650 4325
+Wire Wire Line
+	9650 4325 9575 4325
+Connection ~ 8175 4225
+Text GLabel 9575 4125 2    50   Input ~ 0
+5V
+Wire Wire Line
+	8475 4225 8475 4325
+Connection ~ 8475 4325
+Wire Wire Line
+	5875 1550 6000 1550
+$Comp
+L Connector:Conn_01x03_Male UART
+U 1 1 5E4F3F92
+P 5100 1900
+F 0 "UART" H 5225 2125 50  0000 C CNN
+F 1 " " H 5208 2090 50  0000 C CNN
+F 2 "" H 5100 1900 50  0001 C CNN
+F 3 "~" H 5100 1900 50  0001 C CNN
+	1    5100 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4F7588
+P 5300 1800
+F 0 "#PWR?" H 5300 1550 50  0001 C CNN
+F 1 "GND" V 5305 1672 50  0000 R CNN
+F 2 "" H 5300 1800 50  0001 C CNN
+F 3 "" H 5300 1800 50  0001 C CNN
+	1    5300 1800
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5875 1550 0    50   Input ~ 0
+PA9
+Text GLabel 5300 1900 2    50   Input ~ 0
+PA9
+Text GLabel 2700 1850 0    50   Input ~ 0
+PB11
+Text GLabel 5300 2000 2    50   Input ~ 0
+PB11
+$EndSCHEMATC
